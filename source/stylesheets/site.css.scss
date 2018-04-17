@@ -5,7 +5,7 @@
   border: 3px rgba(#444, 0.25) solid;
   border-top: 3px rgba(#444, 1) solid;
   border-radius: 50%;
-  animation: spinning .6s infinite linear;
+  animation: spinning 0.6s infinite linear;
 }
 
 @keyframes spinning {
@@ -21,13 +21,23 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   color: #fff;
+  text-align: center;
   // background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  @media (max-width: 768px) {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
   .head {
     text-shadow: 0 0 3px rgba(#999, 0.25);
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
-  .head, .subhead {
-    text-align: center;
+  .subhead {
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -48,6 +58,9 @@
     margin-bottom: 3rem;
     position: relative;
     top: -12px;
+    @media (max-width: 768px) {
+      margin-bottom: 0.2rem;
+    }
     .form-control {
       min-width: 50%;
       border-width: 2px;
@@ -129,7 +142,8 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
-  .action, .lead {
+  .action,
+  .lead {
     margin-bottom: 3rem;
   }
   .small {
@@ -146,4 +160,3 @@
     color: #888;
   }
 }
-
